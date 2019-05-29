@@ -1,11 +1,14 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
+// @ts-ignore
 import { action } from '@storybook/addon-actions';
+// @ts-ignore
 import { linkTo } from '@storybook/addon-links';
-
+// @ts-ignore
 import { Welcome } from '@storybook/react/demo';
-import Button from "../components/buttons/Button";
+import Button from "./Button";
+
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
