@@ -18,6 +18,10 @@ const buttonStyles = (theme: Theme) => ({
 
         '&:hover' : {
             textDecoration: 'none',
+        },
+
+        '&:focus' : {
+            outline:0
         }
     }
 });
