@@ -1,4 +1,5 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
     "target": "es6",
     "lib": [
@@ -22,10 +23,11 @@
     "declaration": true,
     "removeComments": true,
     "baseUrl": "./src/",
-    "outDir": "./components"
+    "outDir": "./core"
   },
     "include": [
-    "src/components"
+      "src/components",
+      "src/styles"
   ],
   "exclude": [
     "config",

@@ -1,9 +1,15 @@
 import React from  'react';
+import withStyles from 'react-jss'
+import buttonStyles from "./Button.styles";
 
-type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>
+interface IButtonProps {
+    classes: any
+}
 
-const Button: React.FC<ButtonProps> = (props: ButtonProps ) => {
-    return (<button {...props}> { props.children } </button>)
+export type ButtonProps = IButtonProps & React.ButtonHTMLAttributes<HTMLButtonElement>
+
+const ButtonBase: React.FC<ButtonProps> = ({classes, children , ...others}) => {
+    return (<button className={classes.root} {...others}> { children } </button>)
 };
-
+const Button = withStyles(buttonStyles)(ButtonBase);
 export default  Button;
