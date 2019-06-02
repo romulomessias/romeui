@@ -23,7 +23,8 @@
     "declaration": true,
     "removeComments": true,
     "baseUrl": "./src/",
-    "outDir": "./core"
+    "rootDir": "./src",
+    "outDir": "./dist"
   },
     "include": [
       "src/components",

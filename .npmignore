@@ -1,0 +1,14 @@
+src
+tsconfig.json
+\.idea/
+node_modules/
+.storybook
+config
+scripts
+build
+/coverage
+public
+*.spec.d.ts
+*.spec.jsx
+*.stories.d.ts
+*.stories.jsx
