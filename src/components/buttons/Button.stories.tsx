@@ -1,17 +1,17 @@
 import React from 'react';
 // @ts-ignore
-import { storiesOf } from '@storybook/react';
+import {storiesOf} from '@storybook/react';
 // @ts-ignore
-import { action } from '@storybook/addon-actions';
+import {action} from '@storybook/addon-actions';
 // @ts-ignore
-import { linkTo } from '@storybook/addon-links';
+import {linkTo} from '@storybook/addon-links';
 // @ts-ignore
-import { Welcome } from '@storybook/react/demo';
+import {Welcome} from '@storybook/react/demo';
 import Button from "./Button";
-import { ThemeProvider } from 'react-jss';
+import {ThemeProvider} from 'react-jss';
 import defaultTheme from "../../styles/defaultTheme";
 
-storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
+storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')}/>);
 
 storiesOf('Button', module)
 // .addDecorator(withThemesProvider(defaultTheme, Theme))

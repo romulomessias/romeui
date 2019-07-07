@@ -1,4 +1,4 @@
-import React from  'react';
+import React from 'react';
 import withStyles from 'react-jss'
 import buttonStyles from "./Button.styles";
 import clsx from "clsx";
@@ -11,7 +11,7 @@ interface IButtonProps {
 
 export type ButtonProps = IButtonProps & React.ButtonHTMLAttributes<HTMLButtonElement>
 
-const ButtonBase: React.FC<ButtonProps> = ( props ) => {
+const ButtonBase: React.FC<ButtonProps> = (props) => {
     const {classes, color, children, ...others} = props;
 
     const classNames = clsx(classes.root, {
@@ -19,7 +19,7 @@ const ButtonBase: React.FC<ButtonProps> = ( props ) => {
         [classes.secondary]: color == "secondary"
     });
 
-    return (<button className={classNames} {...others}> { children } </button>)
+    return (<button className={classNames} {...others}> {children} </button>)
 };
 const Button = withStyles(buttonStyles)(ButtonBase);
-export default  Button;
+export default Button;

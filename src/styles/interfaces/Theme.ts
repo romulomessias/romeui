@@ -1,6 +1,7 @@
 import Palette from "./Palette";
+import Sizes from "./Sizes";
 
 export default interface Theme {
     palette: Palette;
-    spacing: (unit: number) => number;
+    sizes: Sizes;
 }
