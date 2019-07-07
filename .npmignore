@@ -3,6 +3,12 @@ tsconfig.json
 \.idea/
 node_modules/
 .storybook
+.firebaserc
+.firebase
+firebase.json
+babel.config.js
+jest.config.js
+storybook-static
 config
 scripts
 build
