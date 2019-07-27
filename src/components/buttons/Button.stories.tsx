@@ -11,7 +11,7 @@ import Button from "./Button";
 import {ThemeProvider} from 'react-jss';
 import defaultTheme from "../../styles/defaultTheme";
 
-storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')}/>);
+// storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')}/>);
 
 storiesOf('Button', module)
 // .addDecorator(withThemesProvider(defaultTheme, Theme))

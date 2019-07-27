@@ -1,17 +1,15 @@
-import React from 'react';
+import React, {ButtonHTMLAttributes, HTMLAttributes, PropsWithChildren} from 'react';
 import withStyles from "react-jss";
 import tabStyles from "./Tab.styles";
 import clsx from "clsx";
 
-
 interface ITabProps {
     classes: any;
-    isCurrent: boolean;
+    isCurrent?: boolean;
     value?: any;
-    onClick?: (value?: any) => any;
 }
 
-export type TabProps = ITabProps & React.ButtonHTMLAttributes<HTMLButtonElement>
+export type TabProps = PropsWithChildren<ITabProps> & HTMLAttributes<HTMLElement>
 
 const TabBase: React.FC<TabProps> = (props: TabProps) => {
     const { classes, isCurrent, children, value, onClick, ...others } = props;
@@ -19,12 +17,22 @@ const TabBase: React.FC<TabProps> = (props: TabProps) => {
         [classes.current]: isCurrent
     });
 
+    const onTabClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+      if(onClick) {
+          onClick(e);
+      }
+    };
+
     return (
-        <div className={classNames} onClick={onClick}>
+        <div {...others} className={classNames} onClick={onTabClick}>
             {children}
         </div>
     )
 };
+
+TabBase.defaultProps = {
+    isCurrent: false,
+}
 
 const Tab = withStyles(tabStyles)(TabBase);;
 export default  Tab;

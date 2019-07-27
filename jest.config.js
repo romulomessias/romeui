@@ -3,7 +3,7 @@ module.exports = {
   rootDir: "./",
   testEnvironment: 'jest-environment-jsdom-fourteen',
   transform: {
-    "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
+    "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/babel-jest",
   },
   transformIgnorePatterns: [
     "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
@@ -11,7 +11,6 @@ module.exports = {
   ],
   watchPlugins: [
     "jest-watch-typeahead/filename",
-    "jest-watch-typeahead/testname"
-  ]
+  ],
 };
 

@@ -1,31 +1,28 @@
-import React from 'react';
+import React, {FC, PropsWithChildren} from 'react';
 import injectSheet from "react-jss";
-import tabBarStyles from "./TabBar.styles";
+import tabBarStyles, {TabBarClassKey} from "./TabBar.styles";
+import {TabProps} from "./Tab";
 
 interface ITabBarProps {
-    classes: any;
+    classes: Record<TabBarClassKey, string>;
 }
 
-type TabBarProps = React.PropsWithChildren<ITabBarProps>;
+type TabBarProps = PropsWithChildren<ITabBarProps>;
 
 const TabBarBase: React.FC<TabBarProps> = (props: TabBarProps) => {
     const { classes, children } = props;
     const [currenttab, setCurrentTab] = React.useState(0);
 
-
-
     const childrens = React.Children.map(children, (child, index) => {
-        if (!React.isValidElement(child)) {
-            return null;
+        if (!React.isValidElement<TabProps>(child)) {
+            throw Error(`${child} is not a valid Tab`);
         }
-
-        const isCurrent = index == currenttab;
         const onChildClick = (value: any) => {
             setCurrentTab(index)
         };
 
-        return React.cloneElement(child, {
-            isCurrent,
+        return React.cloneElement<TabProps>(child, {
+            isCurrent: index == currenttab,
             onClick: onChildClick
         })
 
@@ -33,7 +30,6 @@ const TabBarBase: React.FC<TabBarProps> = (props: TabBarProps) => {
 
     return (
         <div className={classes.root}>
-            {/*{children}*/}
             {childrens}
         </div>
     )

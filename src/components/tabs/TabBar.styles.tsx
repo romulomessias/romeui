@@ -1,6 +1,10 @@
 import Theme from "../../styles/interfaces/Theme";
+import {CSSProperties} from "jss/css";
+import {ButtonClassKey} from "../buttons/Button.styles";
 
-const tabBarStyles = (theme: Theme) => ({
+export type TabBarClassKey = 'root';
+
+const tabBarStyles = (theme: Theme): Record<TabBarClassKey, CSSProperties | Record<string, CSSProperties>> => ({
     root: {
         display: 'flex',
         padding: 2,
