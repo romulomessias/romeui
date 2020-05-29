@@ -9,7 +9,7 @@
       "esnext",
       "dom.iterable",
        "es2016.array.include",
-       "es2017.object",
+       "es2017.object"
     ],
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -21,19 +21,15 @@
     "resolveJsonModule": true,
     "isolatedModules": false,
     "noEmit": false,
-    "jsx": "preserve",
+    "jsx": "react",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "declaration": true,
     "removeComments": true,
-    "baseUrl": "./src/",
+    "baseUrl": "./",
     "rootDir": "./src",
     "outDir": "./dist"
   },
-    "include": [
-      "src/components",
-      "src/styles"
-  ],
   "exclude": [
     "config",
     "scripts",

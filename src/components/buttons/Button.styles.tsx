@@ -12,18 +12,39 @@ const buttonStyles = (theme: Theme) => ({
         boxShadow: '0px 0px 0px transparent',
         webkitBoxShadow: '0px 0px 0px transparent',
         display: 'inline-block',
-        backgroundColor: theme.palette.primary.main,
-        color: '#fff',
-        borderRadius: 8,
+        borderRadius: 5,
 
         '&:hover' : {
             textDecoration: 'none',
+            backgroundColor: '#e0e0e0',
         },
 
         '&:focus' : {
-            outline:0
-        }
-    }
+            outline:0,
+        },
+    },
+
+    primary: {
+        backgroundColor: theme.palette.primary.main,
+        // color: theme.palette.primaryText.main,
+
+        '&:hover' : {
+            textDecoration: 'none',
+            backgroundColor: theme.palette.primary.lighter,
+            // color: theme.palette.primaryTextColor.darker,
+        },
+    },
+
+    secondary: {
+        backgroundColor: theme.palette.secondary.main,
+        // color: theme.palette.secondaryTextColor.main,
+
+        '&:hover' : {
+            textDecoration: 'none',
+            backgroundColor: theme.palette.secondary.lighter,
+            // color: theme.palette.secondaryTextColor.darker,
+        },
+    },
 });
 
 

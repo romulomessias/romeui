@@ -1,6 +1,6 @@
 export default interface Palette {
     primary: Partial<PalleteColor>;
-    seconndary: Partial<PalleteColor>;
+    secondary: Partial<PalleteColor>;
 }
 
 export interface PalleteColor {

@@ -5,7 +5,7 @@ const defaultTheme: Theme = {
         primary: {
             main: '#0062ff',
         },
-        seconndary: {
+        secondary: {
             main: '#90ff5a',
         }
     },
