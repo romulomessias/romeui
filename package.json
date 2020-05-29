@@ -4,6 +4,11 @@
   "author": "Romulo Messias",
   "license": "MIT License",
   "description": "",
+  "directories": {
+    "lib": "./dist"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.js",
   "scripts": {
     "test": "jest",
     "start": "start-storybook -p 9009 -s public",
@@ -12,6 +17,7 @@
     "publish-pack": "yarn version --patch && npm publish --access public"
   },
   "dependencies": {
+    "clsx": "^1.0.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-jss": "^8.6.1"
